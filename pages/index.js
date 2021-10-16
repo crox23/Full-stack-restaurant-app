@@ -4,6 +4,10 @@ import {ApolloProvider,ApolloClient,HttpLink, InMemoryCache} from '@apollo/clien
 import RestaurantList from '../components/restaurantList';
 import { InputGroup, InputGroupAddon,Input} from "reactstrap";
 
+function test_git(){
+    return( <h1>Hello World</h1>
+};
+
 
 function Home() {
     const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:1337";
