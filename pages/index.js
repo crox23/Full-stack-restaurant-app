@@ -4,9 +4,6 @@ import {ApolloProvider,ApolloClient,HttpLink, InMemoryCache} from '@apollo/clien
 import RestaurantList from '../components/restaurantList';
 import { InputGroup, InputGroupAddon,Input} from "reactstrap";
 
-function test_git(){
-    return( <h1>Hello World</h1>
-};
 
 
 function Home() {
@@ -16,7 +13,9 @@ function Home() {
     const link = new HttpLink({ uri: `${API_URL}/graphql`})
     const cache = new InMemoryCache()
     const client = new ApolloClient({link,cache});
- 
+    const  test = function test_git(){
+    return( <h1>Hello World</h1>)
+};
   
     return (
         <ApolloProvider client={client}>
@@ -34,8 +33,12 @@ function Home() {
             </div>
             <RestaurantList search={query} />
             <Cart> </Cart>
+   <h1>Hello World</h1>
         </ApolloProvider>
+
     );
+
+
   }
   export default Home;
   
